@@ -1,0 +1,7 @@
+{
+  "name": "LinkedinCourse1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
