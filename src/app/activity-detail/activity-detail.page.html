@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="(activityDetail | async)?.image" alt="image"></ion-img>
+
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>
+        {{(activityDetail | async)?.name}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{(activityDetail | async)?.description}}
+    </ion-card-content>
+  </ion-card> 
+
+  <ion-card>
+    <ion-list lines="none"> 
+      <ion-item>
+        <ion-label>  Duration </ion-label>
+        <ion-chip color="primary"> {{ (activityDetail |async)?.duration}}  </ion-chip>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>  Category </ion-label>
+        <ion-chip color="primary"> {{ (activityDetail |async)?.category}}  </ion-chip>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>  popularity </ion-label>
+        <ion-chip color="primary"> {{ (activityDetail |async)?.popularity}}  </ion-chip>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)=" openModal()" color="success">
+        <ion-icon name="play"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="share()">
+        <ion-icon name="share"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger" (click)="addToFavourites()">
+        <ion-icon name="star"></ion-icon>
+      </ion-fab-button>
+    
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

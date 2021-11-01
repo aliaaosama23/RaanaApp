@@ -1,0 +1,11 @@
+<ion-card button  routerDirection="forward">
+    <ion-img [src]="activity.cropped"></ion-img>
+    <ion-card-header>
+      <ion-card-title>
+        {{activity.name}}
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- [routerLink]="['activity-detail',activity.id]" routerDirection="forward" button
+   *ngFor="let activity of (activityList | async)" -->

@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.raanaapp.ionic',
   appName: 'LinkedinCourse1',
   webDir: 'www',
   bundledWebRuntime: false

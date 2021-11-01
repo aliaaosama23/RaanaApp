@@ -1,17 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+    Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+ 
+  <ion-avatar (click)="selectImageSource()" class="profile-pic">
+    <ion-img  [src]="(myStoredProfileImage | async)?.image_src" ></ion-img>
+    <!-- <ion-img *ngIf="!imageSrc" src="../assets/images/img_avatar.png" ></ion-img> -->
+    <!-- <ion-img *ngIf="imageSrc" [src]="imageSrc" ></ion-img> -->
+  </ion-avatar>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+      Sani Yusef
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       The Author of the course
+    </ion-card-content>
+  </ion-card>
 </ion-content>
